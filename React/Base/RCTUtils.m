@@ -37,9 +37,9 @@ NSString *RCTJSONStringify(id jsonObject, NSError **error)
   });
 
   // Use JSONKit if available and object is not a fragment
-  if (JSONKitSelector && [collectionTypes containsObject:[jsonObject classForCoder]]) {
-    return ((NSString *(*)(id, SEL, int, NSError **))objc_msgSend)(jsonObject, JSONKitSelector, 0, error);
-  }
+  //if (JSONKitSelector && [collectionTypes containsObject:[jsonObject classForCoder]]) {
+  //  return ((NSString *(*)(id, SEL, int, NSError **))objc_msgSend)(jsonObject, JSONKitSelector, 0, error);
+  //}
 
   // Use Foundation JSON method
   NSData *jsonData = [NSJSONSerialization
